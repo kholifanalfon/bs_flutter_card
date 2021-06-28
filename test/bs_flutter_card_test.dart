@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:bs_flutter_card/bs_flutter_card.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('bs_flutter_card');
@@ -15,9 +14,5 @@ void main() {
 
   tearDown(() {
     channel.setMockMethodCallHandler(null);
-  });
-
-  test('getPlatformVersion', () async {
-    expect(await BsFlutterCard.platformVersion, '42');
   });
 }

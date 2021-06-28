@@ -1,15 +1,42 @@
 # bs_flutter_card
 
+![Alt text](https://raw.githubusercontent.com/kholifanalfon/bs_flutter_card/main/screenshot/example.png "Card Example")
+
 Flutter Bootstrap cards provide a flexible and extensible content container with multiple variants and options.
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+Add the dependency in `pubspec.yaml`:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```yaml
+dependencies:
+  ...
+  bs_flutter_card: any
+```
+
+Create box card:
+
+```dart
+// ...
+  BsCard(
+    children: [
+      BsCardContainer(title: Text('Box Card')),
+      BsCardContainer(child: Container(
+        child: Text('Box Card Content'),
+      )),
+      BsCardContainer(actions: [
+        BsButton(
+          onPressed: () {},
+          style: BsButtonStyle.primary,
+          prefixIcon: Icons.block,
+          label: Text('Primary'),
+        )
+      ])
+    ],
+  )
+// ...
+```
+
+### Note
+- To custom card style use `BsCardContainerStyle` or `BsCardStyle`
 
